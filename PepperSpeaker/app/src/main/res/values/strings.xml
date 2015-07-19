@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Pepper Speaker</string>
+
+<!-- MainActivity -->
+    <string name="toast_enter_ip">Please enter ip address</string>
+    <string name="toast_enter_message">Please enter message</string>
+    <string name="toast_not_recognize">Cannot recognize speak</string>
+    <string name="toast_error">Error initializing speech to text engine</string>
+
+<!-- activity_main -->
+    <string name="edittext_ip_hint">IP Address</string>
+    <string name="edittext_message_text">Hello</string>
+    <string name="edittext_message_hint">Message</string>
+    <string name="button_connnect">Connnect</string>
+    <string name="button_send">Send</string>
+    <string name="button_speak">Speak</string>
+    <string name="checkbox_repeat">Repeat</string>
+
+</resources>

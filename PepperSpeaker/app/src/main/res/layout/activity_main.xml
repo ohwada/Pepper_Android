@@ -1,0 +1,97 @@
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp" >
+
+        <EditText
+            android:id="@+id/EditText_ip"
+            android:hint="@string/edittext_ip_hint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3" />
+
+        <Button
+            android:text="@string/button_connnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="onClickConnect"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LinearLayout_main"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp" 
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp" >
+
+            <EditText
+                android:id="@+id/EditText_message"
+                android:text="@string/edittext_message_text"
+                android:hint="@string/edittext_message_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="3" />
+
+            <Button
+                android:text="@string/button_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClickSend"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            android:layout_margin="4dp" >
+        
+            <Button
+                android:text="@string/button_speak"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="onClickSpeak" />
+
+            <CheckBox
+                android:text="@string/checkbox_repeat"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" 
+                android:onClick="onClickRepeat" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="4dp" 
+        android:scaleType="fitCenter"
+        android:src="@drawable/pepper" />
+
+</LinearLayout>

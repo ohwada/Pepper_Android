@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Pepper Speaker</string>
+
+<!-- MainActivity -->
+    <string name="toast_enter_ip">IPアドレスを入力してください</string>
+    <string name="toast_enter_message">メッセージを入力してください</string>
+    <string name="toast_not_recognize">スピーチを認識できません</string>
+    <string name="toast_error">エラー：Speech to Text エンジンを初期化できない</string>
+
+<!-- activity_main -->
+    <string name="edittext_ip_hint">IPアドレス</string>
+    <string name="edittext_message_text">こんにちは</string>
+    <string name="edittext_message_hint">メッセージ</string>
+    <string name="button_connnect">接続する</string>
+    <string name="button_send">送信する</string>
+    <string name="button_speak">話す</string>
+    <string name="checkbox_repeat">繰返し</string>
+
+</resources>
