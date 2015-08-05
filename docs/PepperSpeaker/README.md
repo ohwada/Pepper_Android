@@ -7,10 +7,10 @@ using java-naoqi-sdk-xxx-android.jar <br>
 
 ### API
 Speech to Text <br>
-Google Sppech Recognizer API <br>
+[Android Speech Recognizer](http://developer.android.com/reference/android/speech/SpeechRecognizer.html) <br>
 
 Text to Speech <br>
-Naoqi ALTextToSpeech#say <br>
+[NAOqi ALTextToSpeech](http://doc.aldebaran.com/2-1/naoqi/audio/altexttospeech.html#altexttospeech) <br>
 
 ### Souce code
 https://github.com/ohwada/Pepper_Android/tree/master/PepperSpeaker <br>
