@@ -19,5 +19,5 @@ Require <br>
 java-naoqi-sdk-xxx-android.jar <br>
 
 ### Photo
-<img src="https://raw.githubusercontent.com/ohwada/Pepper_Android/master/docs/PepperSpeaker/concept.png" width="300" /> <br>
+<img src="https://raw.githubusercontent.com/ohwada/Pepper_Android/master/docs/PepperSpeaker/concept.png" width="500" /> <br>
 <img src="https://raw.githubusercontent.com/ohwada/Pepper_Android/master/docs/PepperSpeaker/screen.png" width="200" /> <br>
