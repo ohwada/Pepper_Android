@@ -5,6 +5,8 @@ Android app <br>
 Pepper speak in his voice the words that you speak. <br>
 using java-naoqi-sdk-xxx-android.jar <br>
 
+<img src="https://raw.githubusercontent.com/ohwada/Pepper_Android/master/docs/PepperSpeaker/concept.png" width="500" /> <br>
+
 ### API
 Speech to Text <br>
 [Android Speech Recognizer](http://developer.android.com/reference/android/speech/SpeechRecognizer.html) <br>
@@ -18,6 +20,5 @@ https://github.com/ohwada/Pepper_Android/tree/master/PepperSpeaker <br>
 Require <br>
 java-naoqi-sdk-xxx-android.jar <br>
 
-### Photo
-<img src="https://raw.githubusercontent.com/ohwada/Pepper_Android/master/docs/PepperSpeaker/concept.png" width="500" /> <br>
+### Screenshot
 <img src="https://raw.githubusercontent.com/ohwada/Pepper_Android/master/docs/PepperSpeaker/screen.png" width="200" /> <br>
