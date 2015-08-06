@@ -2,7 +2,7 @@ Pepper Speaker
 ===============
 
 Android app <br>
-Pepper speak in his voice the words that you speak. <br>
+Pepper speak in his voice the words that you speak to Android phone. <br>
 using java-naoqi-sdk-xxx-android.jar <br>
 
 <img src="https://raw.githubusercontent.com/ohwada/Pepper_Android/master/docs/PepperSpeaker/concept.png" width="500" /> <br>
