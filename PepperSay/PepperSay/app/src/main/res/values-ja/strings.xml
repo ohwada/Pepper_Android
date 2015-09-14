@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 2015-07-01 K.OHWADA -->
+<resources>
+    <string name="app_name">PepperSay</string>
+
+<!-- MainActivity -->
+    <string name="language">Japanese</string>
+    <string name="say_hello">アンドロイドから　こんにちは</string>
+    <string name="toast_enter_ip">IPアドレスを入力してください</string>
+    <string name="toast_enter_correct">正しいIPアドレスを入力してください</string>
+    <string name="toast_connected">接続しました</string>
+    <string name="toast_connect_failed">接続に失敗しました</string>
+    <string name="toast_not_connected">接続してません</string>
+    <string name="toast_speech_failed">スピーチに失敗しました</string>
+
+<!-- activity_main -->
+    <string name="edittext_ip_hint">IPアドレス</string>
+    <string name="button_connnect">接続</string>
+    <string name="button_say">発声する</string>
+
+</resources>
