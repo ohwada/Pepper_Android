@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 2015-08-01 K.OHWADA -->
+<resources>
+    <string name="app_name">PepperSayList</string>
+
+<!-- MainActivity -->
+    <string name="language">English</string>
+    <string name="toast_enter_ip">Please enter the ip address</string>
+    <string name="toast_enter_correct">Please enter the correct ip address</string>
+    <string name="toast_connected">Connected</string>
+    <string name="toast_connect_failed">Connect failed</string>
+    <string name="toast_not_connected">Not Connected</string>
+    <string name="toast_speech_failed">Speech failed</string>
+
+<!-- CreateActivity --> 
+    <string name="toast_create_please_enter">Please enter message</string>
+    <string name="toast_create_success">Create Successful</string>
+    <string name="toast_create_failed">Create Failed</string>
+
+<!-- UpdateActivity --> 
+    <string name="toast_update_success">Update Successful</string>
+    <string name="toast_update_failed">Update Failed</string>
+    <string name="toast_delete_success">Delete Successful</string>
+    <string name="toast_delete_failed">Delete Failed</string>
+
+<!-- activity_main -->
+    <string name="edittext_ip_hint">IP Address</string>
+    <string name="button_connnect">Connnect</string>
+    <string name="button_say">Say</string>
+    <string name="button_add">Add</string>
+
+<!-- activity_msg_list -->
+    <string name="button_create">Create</string>
+    <string name="button_back">Back</string>
+
+<!-- activity_record -->
+    <string name="button_update">Update</string>
+    <string name="button_delete">Delete</string>
+    <string name="item_id">ID</string>	
+    <string name="item_title">Title</string>
+    <string name="item_msg">Message</string>
+    <string name="item_time">Time</string>
+
+<!-- menu -->
+    <string name="menu_list">Message LIst</string>
+    <string name="menu_language">Language Setting</string>
+
+<!-- dialog_language -->
+    <string name="radio_language_english">English</string>
+    <string name="radio_language_japanese">Japanese</string>
+
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 2015-08-01 K.OHWADA -->
+<resources>
+    <string-array name="messages">
+        <item>Hello</item>
+        <item>Goodbye</item>
+        <item>Thank you</item>
+    </string-array>
+</resources>

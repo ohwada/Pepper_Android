@@ -1,13 +1,13 @@
 Pepper Say
 ===============
 
+### Feature
 Android app <br>
 Pepper speak "hello". <br>
-using java-naoqi-sdk-xxx-android.jar <br>
 
 ### Difference between Pepper Say
-(1) Save IP address <br>
-(2) English and Japanese language files <br>
+- Save and load IP address automatically <br>
+- English and Japanese language files <br>
 
 ### API
 Text to Speech <br>

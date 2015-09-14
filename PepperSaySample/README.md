@@ -1,10 +1,10 @@
 Pepper Say Sample
 ===============
 
+### Feature
 Android app <br>
 Pepper speak "hello". <br>
 The simplest sample first to try. <br>
-using java-naoqi-sdk-xxx-android.jar <br>
 
 ### API
 Text to Speech <br>

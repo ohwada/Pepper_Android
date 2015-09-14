@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 2015-08-01 K.OHWADA -->
+<resources>
+    <string name="app_name">PepperSayList</string>
+
+<!-- MainActivity -->
+    <string name="language">Japanese</string>
+    <string name="toast_enter_ip">IPアドレスを入力してください</string>
+    <string name="toast_enter_correct">正しいIPアドレスを入力してください</string>
+    <string name="toast_connected">接続しました</string>
+    <string name="toast_connect_failed">接続に失敗しました</string>
+    <string name="toast_not_connected">接続してません</string>
+    <string name="toast_speech_failed">スピーチに失敗しました</string>
+
+<!-- CreateActivity --> 
+    <string name="toast_create_please_enter">メッセージを入力してください</string>
+    <string name="toast_create_success">作成しました</string>
+    <string name="toast_create_failed">作成に失敗しました</string>
+
+<!-- UpdateActivity --> 
+    <string name="toast_update_success">更新しました</string>
+    <string name="toast_update_failed">更新に失敗しました</string>
+    <string name="toast_delete_success">削除しました</string>
+    <string name="toast_delete_failed">削除に失敗しました</string>
+
+<!-- activity_main -->
+    <string name="edittext_ip_hint">IPアドレス</string>
+    <string name="button_connnect">接続</string>
+    <string name="button_say">発声する</string>
+    <string name="button_add">追加する</string>
+
+<!-- activity_msg_list -->
+    <string name="button_create">作成する</string>
+    <string name="button_back">戻る</string>
+
+<!-- activity_record -->
+    <string name="button_update">更新する</string>
+    <string name="button_delete">削除する</string>
+    <string name="item_id">ID</string>	
+    <string name="item_title">タイトル</string>
+    <string name="item_msg">メッセージ</string>
+    <string name="item_time">時刻</string>
+
+<!-- menu -->
+    <string name="menu_list">メッセージ一覧</string>
+    <string name="menu_language">言語設定</string>
+
+<!-- dialog_language -->
+    <string name="radio_language_english">英語</string>
+    <string name="radio_language_japanese">日本語</string>
+
+</resources>
