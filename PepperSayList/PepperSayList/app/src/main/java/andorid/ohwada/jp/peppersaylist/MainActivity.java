@@ -18,6 +18,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.SeekBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.aldebaran.qi.EmbeddedTools;
@@ -38,11 +40,8 @@ public class MainActivity extends ListActivity
     private static final String TAG = Constant.TAG;
     private static final boolean D = Constant.DEBUG;
 
-    // Pepper Connection
-    private static final String IP_KEY = "ip_address";
-    private static final String IP_DEFAULT = "192.168.1.1";
-    private static final String PORT = "9559";
-    private static final String IP_PATTERN = "^\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}$";
+    // char
+    private static final String LF = "\n";
 
     // activity
     private static final int REQUEST_CODE_LIST = Constant.REQUEST_CODE_LIST;
@@ -53,34 +52,62 @@ public class MainActivity extends ListActivity
     private static final int LIMIT = Constant.MAX_RECORD;
     private static final int SQL_ERREOR = -1;
 
+    // Volume
+    private static final int VOL_MAX = RobotController.VOL_MAX;
+    private static final int VOL_PROGRESS = RobotController.VOL_PROGRESS;
+    private static final int VOL_ERROR = RobotController.VOL_ERROR;
+
+    // class object 
+    private RobotController mRobotController;
+
     // View
     private ListView mListView;
     private EditText mEditTextIp;
     private EditText mEditTextMsg;
+    private TextView mTextViewVolume;
+    private SeekBar mSeekBarVolume;
 
     // List
     private MsgHelper mHelper;
     private SayAdapter mAdapter;
     private List<MsgRecord> mList = new ArrayList<MsgRecord>();
 
-    private SharedPreferences mPreferences;
-
     // Pepper API
-    private Session mQiSession;
     private String mLanguage;
+    private int mVolume = VOL_PROGRESS;
 
     /**
      * === onCreate ===
      */
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        mPreferences = PreferenceManager.getDefaultSharedPreferences(this);        
+    protected void onCreate( Bundle savedInstanceState ) {
+        super.onCreate( savedInstanceState );
+        setContentView( R.layout.activity_main );
+        initRobotController();       
         // View
         mEditTextIp = (EditText) findViewById( R.id.EditText_ip );
-        mEditTextIp.setText( mPreferences.getString(IP_KEY, IP_DEFAULT) );
+        mEditTextIp.setText( mRobotController.getPrefAddr() );
         mEditTextMsg = (EditText) findViewById( R.id.EditText_msg );
+        mTextViewVolume = (TextView) findViewById( R.id.TextView_volume );
+        setTextViewVolume( mVolume );
+        // SeekBar
+        mSeekBarVolume = (SeekBar) findViewById( R.id.SeekBar_volume );
+        mSeekBarVolume.setMax( VOL_MAX );
+        mSeekBarVolume.setProgress( VOL_PROGRESS );
+        mSeekBarVolume.setOnSeekBarChangeListener( new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onStartTrackingTouch( SeekBar seek ) {
+                // noting to do
+            }
+            @Override
+            public void onProgressChanged( SeekBar seek, int progress, boolean touch ) {
+                procProgressChanged( progress );
+            }
+            @Override
+            public void onStopTrackingTouch( SeekBar seek ) {
+                procStopTrackingTouch();
+            }
+        });
         // List
         mHelper = new MsgHelper( this );
         mAdapter = new SayAdapter( this, 0, mList );
@@ -90,12 +117,59 @@ public class MainActivity extends ListActivity
         mListView.setOnItemClickListener( this );
         // pepper
         mLanguage = getString( R.string.language );
-        // Embedded Tools
-        EmbeddedTools tools = new EmbeddedTools();
-        File dir = getApplicationContext().getCacheDir();
-        log_d( "Extracting libraries in " + dir.getAbsolutePath() );
-        tools.overrideTempDirectory(dir);
-        tools.loadEmbeddedLibraries();
+    }
+
+    /**
+     * initRobotController
+     */
+    private void initRobotController() {
+        mRobotController = new RobotController( this );
+        mRobotController.execEmbeddedTool();
+        mRobotController.setOnChangedListener( 
+            new RobotController.OnChangedListener() { 
+            @Override
+            public void onConnectChanged( boolean isSuccess ) {
+                procConnectChanged( isSuccess );
+            }
+        });
+    }
+
+    /**
+     * procConnectChanged
+     */
+    private void procConnectChanged( boolean isSuccess ) {
+        log_d( "procConnectChanged " + isSuccess );
+        if ( !isSuccess ) return;
+        int vol = mRobotController.getVolume();
+        if ( vol == VOL_ERROR ) return;
+        mVolume = vol;
+        setTextViewVolume( vol );
+        mSeekBarVolume.setProgress( vol );
+    }
+
+    /**
+     * procProgressChanged
+     * @param int progress
+     */	
+    private void procProgressChanged( int progress ) {
+        log_d( "procProgressChanged " + progress );
+        mVolume = progress;
+        setTextViewVolume( progress );
+    }
+
+    /**
+     * procStopTrackingTouch
+     */	
+    private void procStopTrackingTouch() {
+        log_d( "procStopTrackingTouch" );
+        mRobotController.setVolume( mVolume );
+    }
+
+    /**
+     * setTextViewVolume
+     */
+    private void setTextViewVolume( int vol ) {
+        mTextViewVolume.setText( Integer.toString(vol) );
     }
 
     /**
@@ -124,40 +198,7 @@ public class MainActivity extends ListActivity
      */
     public void onClickConnect( View view ) {
         String ip = mEditTextIp.getText().toString().trim();
-        if ( "".equals(ip) ) {
-            toast_short( R.string.toast_enter_ip );
-            return;
-        } else if ( !ip.matches(IP_PATTERN) ) {
-            toast_short( R.string.toast_enter_correct );
-            return;
-        }
-        final String addr = ip;
-        Thread thread = new Thread( new Runnable() {
-            @Override
-            public void run() {
-                Looper.prepare();
-                connectPepper(addr);
-            }
-        });
-        thread.start();
-    }
-
-    /**
-     * connect to Pepper
-     */
-    private void connectPepper( String ip ) {
-        log_d( "connectPepper " + ip );
-        mQiSession = new Session();
-        try {
-            mQiSession.connect(ip).get();
-        } catch (Exception e) {
-            toastOnUiThread( e, R.string.toast_connect_failed ); 
-            if (D) e.printStackTrace();
-            mQiSession = null;
-            return;
-        }
-        mPreferences.edit().putString(IP_KEY, ip).apply();
-        toastOnUiThread( R.string.toast_connected );
+        mRobotController.connect( ip );
     }
 
     /**
@@ -165,40 +206,25 @@ public class MainActivity extends ListActivity
      */
     public void onClickSay( View view ) {
         log_d("onClickSay");
-        if ( mQiSession == null ) {
-            toast_short( R.string.toast_not_connected );
+        String msg = getEditTextMsg();
+        if ( "".equals(msg) ) {
+            toast_short( R.string.toast_please_enter );
             return;
         }
-        Thread thread = new Thread( new Runnable() {
-            @Override
-            public void run() {
-                Looper.prepare();
-                robotSay();
-            }
-        });
-        thread.start();
-    }
-
-    /**
-     * robot say
-     */
-    private void robotSay() {
-        try {
-            ALTextToSpeech tts = new ALTextToSpeech( mQiSession );			
-            tts.setLanguage( mLanguage );
-            tts.say( getEditTextMsg() );
-        } catch (Exception e) {
-            toastOnUiThread( e, R.string.toast_speech_failed );
-            if (D) e.printStackTrace();
-        }
+        mRobotController.say( mLanguage, msg );
     }
 
     /**
      * --- onClick Add ---
      */
     public void onClickAdd( View view ) {
+        String msg = getEditTextMsg();
+        if ( "".equals(msg)) {
+            toast_short( R.string.toast_please_enter );
+            return;
+        }
         Intent intent = new Intent( this, CreateActivity.class );
-        intent.putExtra( BUNDLE_EXTRA_MSG, getEditTextMsg() );
+        intent.putExtra( BUNDLE_EXTRA_MSG, msg );
         startActivityForResult(intent, REQUEST_CODE_CREATE);
     }
 
@@ -271,7 +297,7 @@ public class MainActivity extends ListActivity
      * startMsgListActivity
      */ 
     private void startMsgListActivity() {
-       Intent intent = new Intent( this, MsgListActivity.class );
+        Intent intent = new Intent( this, MsgListActivity.class );
         startActivityForResult(intent, REQUEST_CODE_LIST);
     }
 
@@ -300,51 +326,17 @@ public class MainActivity extends ListActivity
     }
 
     /**
-     * toast on UI thread
-     */
-    private void toastOnUiThread( Exception e, int res_id) {
-        String str = getString(res_id);
-        toastOnUiThread(str + "\n" + e.getMessage());
-    }
-
-    /**
-     * toast on UI thread
-     */
-    private void toastOnUiThread( int res_id ) {
-        final int id = res_id;
-        runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                toast_short(id);
-            }
-        });
-    }
- 
-    /**
-     * toast on UI thread
-     */
-    private void toastOnUiThread( String str ) {
-        final String msg = str;
-        runOnUiThread( new Runnable() {
-            @Override
-            public void run() {
-                toast_short( msg );
-            }
-        });
-    }
-
-    /**
      * toast short
      */       
     private void toast_short( String str ) {
-        Toast.makeText(this, str, Toast.LENGTH_SHORT).show();
+        ToastMaster.makeText(this, str, Toast.LENGTH_SHORT).show();
     }
 
     /**
      * toast short
      */       
     private void toast_short( int res_id ) {
-        Toast.makeText(this, res_id, Toast.LENGTH_SHORT).show();
+        ToastMaster.makeText(this, res_id, Toast.LENGTH_SHORT).show();
     }
 
     /**

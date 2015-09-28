@@ -11,9 +11,10 @@
     <string name="toast_connect_failed">接続に失敗しました</string>
     <string name="toast_not_connected">接続してません</string>
     <string name="toast_speech_failed">スピーチに失敗しました</string>
+    <string name="toast_volume_failed">音量に失敗しました</string>
+    <string name="toast_please_enter">メッセージを入力してください</string>
 
 <!-- CreateActivity --> 
-    <string name="toast_create_please_enter">メッセージを入力してください</string>
     <string name="toast_create_success">作成しました</string>
     <string name="toast_create_failed">作成に失敗しました</string>
 
@@ -28,6 +29,7 @@
     <string name="button_connnect">接続</string>
     <string name="button_say">発声する</string>
     <string name="button_add">追加する</string>
+    <string name="label_volume">音量</string>
 
 <!-- activity_msg_list -->
     <string name="button_create">作成する</string>

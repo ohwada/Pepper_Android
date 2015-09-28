@@ -37,7 +37,44 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/button_say"
-        android:onClick="onClickSay"/>
+        android:text="@string/button_hello"
+        android:onClick="onClickHello"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_goodbye"
+        android:onClick="onClickGoodbye"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/button_thankyou"
+        android:onClick="onClickThankyou"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:text="@string/label_volume" />
+
+       <TextView
+            android:id="@+id/TextView_volume"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <SeekBar 
+        android:id="@+id/SeekBar_volume"
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"  />
 
 </LinearLayout>

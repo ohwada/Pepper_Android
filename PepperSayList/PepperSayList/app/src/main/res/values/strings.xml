@@ -11,9 +11,10 @@
     <string name="toast_connect_failed">Connect failed</string>
     <string name="toast_not_connected">Not Connected</string>
     <string name="toast_speech_failed">Speech failed</string>
+    <string name="toast_volume_failed">Volume failed</string>
+    <string name="toast_please_enter">Please enter message</string>
 
 <!-- CreateActivity --> 
-    <string name="toast_create_please_enter">Please enter message</string>
     <string name="toast_create_success">Create Successful</string>
     <string name="toast_create_failed">Create Failed</string>
 
@@ -28,6 +29,7 @@
     <string name="button_connnect">Connnect</string>
     <string name="button_say">Say</string>
     <string name="button_add">Add</string>
+    <string name="label_volume">Audio Volume</string>
 
 <!-- activity_msg_list -->
     <string name="button_create">Create</string>

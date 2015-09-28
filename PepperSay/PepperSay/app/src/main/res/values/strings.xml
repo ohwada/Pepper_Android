@@ -5,17 +5,23 @@
 
 <!-- MainActivity -->
     <string name="language">English</string>
-    <string name="say_hello">Hello from android</string>
+    <string name="say_hello">Hello. I am Pepper.</string>
+    <string name="say_goodbye">Goodbye. See you again.</string>
+    <string name="say_thankyou">Thank you. I really enjoyed it.</string>
     <string name="toast_enter_ip">Please enter the ip address</string>
     <string name="toast_enter_correct">Please enter the correct ip address</string>
     <string name="toast_connected">Connected</string>
     <string name="toast_connect_failed">Connect failed</string>
     <string name="toast_not_connected">Not Connected</string>
     <string name="toast_speech_failed">Speech failed</string>
+    <string name="toast_volume_failed">Volume failed</string>
 
 <!-- activity_main -->
     <string name="edittext_ip_hint">IP Address</string>
     <string name="button_connnect">Connnect</string>
-    <string name="button_say">Say</string>
+    <string name="button_hello">Hello</string>
+    <string name="button_goodbye">Goodbye</string>
+    <string name="button_thankyou">Thank You</string>
+    <string name="label_volume">Audio Volume</string>
 
 </resources>

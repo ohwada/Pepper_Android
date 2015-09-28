@@ -67,7 +67,7 @@ public class CreateActivity extends SqlCommonActivity {
         // get value
         String msg = getEditTextMsg();
         if ( "".equals(msg) ) {
-            toast_short( R.string.toast_create_please_enter );
+            toast_short( R.string.toast_please_enter );
             return;
         }
         // save to DB

@@ -5,17 +5,23 @@
 
 <!-- MainActivity -->
     <string name="language">Japanese</string>
-    <string name="say_hello">アンドロイドから　こんにちは</string>
+    <string name="say_hello">こんにちは。　ぼくはペッパーです。</string>
+    <string name="say_goodbye">さようなら。 また会いましょう。</string>
+    <string name="say_thankyou">ありがとう。　とても楽しかったよ。</string>
     <string name="toast_enter_ip">IPアドレスを入力してください</string>
     <string name="toast_enter_correct">正しいIPアドレスを入力してください</string>
     <string name="toast_connected">接続しました</string>
     <string name="toast_connect_failed">接続に失敗しました</string>
     <string name="toast_not_connected">接続してません</string>
     <string name="toast_speech_failed">スピーチに失敗しました</string>
+    <string name="toast_volume_failed">音量に失敗しました</string>
 
 <!-- activity_main -->
     <string name="edittext_ip_hint">IPアドレス</string>
     <string name="button_connnect">接続</string>
-    <string name="button_say">発声する</string>
+    <string name="button_hello">こんにちは</string>
+    <string name="button_goodbye">さようなら</string>
+    <string name="button_thankyou">ありがとう</string>
+    <string name="label_volume">音量</string>
 
 </resources>
