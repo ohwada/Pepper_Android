@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">PepperPosture</string>
+
+<!-- MainActivity -->
+    <string name="toast_enter_ip">Please enter the ip address</string>
+    <string name="toast_enter_correct">Please enter the correct ip address</string>
+    <string name="toast_connected">Connected</string>
+    <string name="toast_connect_failed">Connect failed</string>
+    <string name="toast_not_connected">Not Connected</string>
+    <string name="toast_posture_failed">Posture failed</string>
+
+<!-- activity_main -->
+    <string name="edittext_ip_hint">IP Address</string>
+    <string name="button_connnect">Connnect</string>
+    <string name="button_stand">Stand</string>
+    <string name="button_stand_zero">Stand Zero</string>
+    <string name="button_stand_init">Stand Init</string>
+    <string name="button_crouch">Crouch</string>
+
+</resources>
