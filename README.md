@@ -38,3 +38,8 @@ https://github.com/ohwada/Pepper_Android/tree/master/PepperJoint <br/>
 Pepper move to the given pose in the ground plane. <br/>
 https://github.com/ohwada/Pepper_Android/tree/master/PepperMoveTo <br/>
 <img src="https://raw.githubusercontent.com/ohwada/Pepper_Android/master/PepperMoveTo/docs/screen.png" width="100" /> <br/>
+
+### Pepper MoveToward
+Pepper move at the given normalized velocity. <br/>
+https://github.com/ohwada/Pepper_Android/tree/master/PepperMoveToward <br/>
+<img src="https://raw.githubusercontent.com/ohwada/Pepper_Android/master/PepperMoveToward/docs/screen.png" width="100" /> <br/>
