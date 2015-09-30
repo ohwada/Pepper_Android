@@ -36,5 +36,5 @@ https://github.com/ohwada/Pepper_Android/tree/master/PepperJoint <br/>
 
 ### Pepper MoveTo
 Pepper move to the given pose in the ground plane. <br/>
-https://github.com/ohwada/Pepper_Android/tree/master/MoveTo <br/>
+https://github.com/ohwada/Pepper_Android/tree/master/PepperMoveTo <br/>
 <img src="https://raw.githubusercontent.com/ohwada/Pepper_Android/master/PepperMoveTo/docs/screen.png" width="100" /> <br/>
