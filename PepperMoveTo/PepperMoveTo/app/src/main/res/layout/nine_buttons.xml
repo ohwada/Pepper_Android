@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 2015-09-01 K.OHWADA -->
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:layout_gravity="center"
+        android:gravity="center" >
+
+        <TableLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+<!-- row 0 -->
+            <TableRow>
+                <ImageView
+                    android:id="@+id/ImageView_nine_forward_left"
+            	android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_column="0"
+                    android:src="@drawable/robot_forward_left" />
+
+                <ImageView
+                    android:id="@+id/ImageView_nine_forward"
+                    android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_column="1"
+                    android:src="@drawable/robot_forward" />
+
+                <ImageView
+                    android:id="@+id/ImageView_nine_forward_right"
+            	android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_column="2"
+                    android:src="@drawable/robot_forward_right" />
+            </TableRow>
+
+<!-- row 1 -->
+            <TableRow>
+                <ImageView
+                    android:id="@+id/ImageView_nine_left"
+            	android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_column="0"
+                    android:src="@drawable/robot_left" />
+
+                <ImageView
+                    android:id="@+id/ImageView_nine_center"
+            	android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_column="1"
+                    android:src="@drawable/robot_stop" />
+
+                <ImageView
+                    android:id="@+id/ImageView_nine_right"
+            	android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_column="2"
+                    android:src="@drawable/robot_right" />
+            </TableRow>
+
+<!-- row 2 -->
+            <TableRow>
+                <ImageView
+                    android:id="@+id/ImageView_nine_back_left"
+            	android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_column="0"
+                    android:src="@drawable/robot_turn_left" />
+		
+                <ImageView
+                    android:id="@+id/ImageView_nine_back"
+            	android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_column="1"
+                    android:src="@drawable/robot_back" />
+		
+                <ImageView
+                    android:id="@+id/ImageView_nine_back_right"
+            	android:layout_width="90dp"
+                    android:layout_height="90dp"
+                    android:layout_column="2"
+                    android:src="@drawable/robot_turn_right" />
+    	
+            </TableRow>
+        </TableLayout>
+
+    </LinearLayout>			
+</LinearLayout>

@@ -13,7 +13,7 @@ Caution <br/>
 This app is in development. <br/>
 
 ### API
-ALMotion <br/>
+ALMotion - Joint control <br/>
 [NAOqi ALMotion#angleInterpolationWithSpeed](http://doc.aldebaran.com/2-1/naoqi/motion/control-joint-api.html#ALMotionProxy::angleInterpolationWithSpeed__AL::ALValueCR.AL::ALValueCR.floatCR) <br/>
 
 ### Souce code

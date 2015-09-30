@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 2015-09-01 K.OHWADA -->
+<resources>
+    <string name="app_name">PepperMove</string>
+
+<!-- MainActivity -->
+    <string name="toast_enter_ip">Please enter the ip address</string>
+    <string name="toast_enter_correct">Please enter the correct ip address</string>
+    <string name="toast_connected">Connected</string>
+    <string name="toast_connect_failed">Connect failed</string>
+    <string name="toast_not_connected">Not Connected</string>
+    <string name="toast_motion_failed">ALMotion failed</string>
+    <string name="toast_move_failed">move failed</string>
+
+<!-- activity_main -->
+    <string name="edittext_ip_hint">IP Address</string>
+    <string name="button_connnect">Connnect</string>
+    <string name="label_x">Front Back (m)</string>
+    <string name="label_y">Left Right (m)</string>
+    <string name="label_theta">Rotation (deg)</string>
+    <string name="edittext_x_hint">Front Back</string>
+    <string name="edittext_y_hint">Left Right</string>
+    <string name="edittext_theta_hint">Rotation</string>
+
+</resources>

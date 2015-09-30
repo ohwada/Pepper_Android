@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 2015-09-01 K.OHWADA -->
+<resources>
+    <string name="app_name">PepperMove</string>
+
+<!-- MainActivity -->
+    <string name="toast_enter_ip">IPアドレスを入力してください</string>
+    <string name="toast_enter_correct">正しいIPアドレスを入力してください</string>
+    <string name="toast_connected">接続しました</string>
+    <string name="toast_connect_failed">接続に失敗しました</string>
+    <string name="toast_not_connected">接続してません</string>
+    <string name="toast_motion_failed">ALMotion を失敗しました</string>
+    <string name="toast_move_failed">move を失敗しました</string>
+
+<!-- activity_main -->
+    <string name="edittext_ip_hint">IPアドレス</string>
+    <string name="button_connnect">接続</string>
+    <string name="label_x">前後 (m)</string>
+    <string name="label_y">左右 (m)</string>
+    <string name="label_theta">回転 (deg)</string>
+    <string name="edittext_x_hint">X軸</string>
+    <string name="edittext_y_hint">Y軸</string>
+    <string name="edittext_theta_hint">Z軸</string>
+
+</resources>
