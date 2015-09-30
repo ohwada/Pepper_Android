@@ -19,5 +19,8 @@ https://github.com/ohwada/Pepper_Android/tree/master/PepperSpeaker/PepperSpeaker
 Require <br>
 java-naoqi-sdk-xxx-android.jar <br>
 
+### Blog (in Japanese)
+http://pepper.ohwada.jp/archives/1105
+
 ### Screenshot
-<img src="https://raw.githubusercontent.com/ohwada/Pepper_Android/master/PepperSpeaker/docs/screen.png" width="200" /> <br>
+<img src="https://raw.githubusercontent.com/ohwada/Pepper_Android/master/PepperSpeaker/docs/screen_main.png" width="200" /> <br>
