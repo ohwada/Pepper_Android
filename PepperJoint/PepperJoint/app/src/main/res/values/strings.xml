@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 2015-09-01 K.OHWADA -->
+<resources>
+    <string name="app_name">PepperJoint</string>
+
+<!-- MainActivity -->
+    <string name="toast_enter_ip">Please enter the ip address</string>
+    <string name="toast_enter_correct">Please enter the correct ip address</string>
+    <string name="toast_connected">Connected</string>
+    <string name="toast_connect_failed">Connect failed</string>
+    <string name="toast_not_connected">Not Connected</string>
+    <string name="toast_motion_failed">Motion failed</string>
+
+<!-- activity_main -->
+    <string name="edittext_ip_hint">IP Address</string>
+    <string name="button_connnect">Connnect</string>
+
+    <string name="label_head_yaw">Head Yaw</string>
+    <string name="label_head_pitch">Head Pitch</string>
+
+    <string name="label_l_shoulder_pitch">Left Shoulder Pitch</string>
+    <string name="label_l_shoulder_roll">Left Shoulder Roll</string>
+    <string name="label_l_elbow_yaw">Left Elbow Yaw</string>
+    <string name="label_l_elbow_roll">Left Elbow Roll</string>
+    <string name="label_l_wrist_yaw">Left Wrist Yaw</string>
+
+    <string name="label_r_shoulder_pitch">Right Shoulder Pitch</string>
+    <string name="label_r_shoulder_roll">Right Shoulder Roll</string>
+    <string name="label_r_elbow_yaw">Right Elbow Yaw</string>
+    <string name="label_r_elbow_roll">Right Elbow Roll</string>
+    <string name="label_r_wrist_yaw">Right Wrist Yaw</string>
+
+    <string name="label_hip_roll">Hip Roll</string>
+    <string name="label_hip_pitch">Hip Pitch</string>
+    <string name="label_knee_pitch">Knee Pitch</string>
+
+</resources>

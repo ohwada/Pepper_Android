@@ -28,3 +28,8 @@ https://github.com/ohwada/Pepper_Android/tree/master/PepperSpeaker <br/>
 Pepper go to the predefined postures. <br/>
 https://github.com/ohwada/Pepper_Android/tree/master/PepperPosture <br/>
 <img src="https://raw.githubusercontent.com/ohwada/Pepper_Android/master/PepperPosture/docs/screen.png" width="100" /> <br/>
+
+### Pepper Joint
+Interpolates Pepper's one joints to a target angle. <br/>
+https://github.com/ohwada/Pepper_Android/tree/master/PepperPosture <br/>
+<img src="https://raw.githubusercontent.com/ohwada/Pepper_Android/master/PepperJoint/docs/screen.png" width="100" /> <br/>

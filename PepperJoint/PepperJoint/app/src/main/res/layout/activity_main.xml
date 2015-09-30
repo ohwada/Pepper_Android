@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 2015-09-01 K.OHWADA -->
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"  
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"     
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/EditText_ip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:hint="@string/edittext_ip_hint"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/button_connnect"
+            android:onClick="onClickConnect"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+<!-- Head Yaw -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="@string/label_head_yaw" />
+
+            <TextView
+                android:id="@+id/TextView_joint_0"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <SeekBar 
+            android:id="@+id/SeekBar_joint_0"
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content"  />
+
+<!-- Head Pitch -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="@string/label_head_pitch" />
+
+            <TextView
+                android:id="@+id/TextView_joint_1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <SeekBar 
+            android:id="@+id/SeekBar_joint_1"
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content"  />
+
+<!-- L Shoulder Pitch -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="@string/label_l_shoulder_pitch" />
+
+            <TextView
+                android:id="@+id/TextView_joint_2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <SeekBar 
+            android:id="@+id/SeekBar_joint_2"
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content"  />
+
+<!-- L Shoulder Roll -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="@string/label_l_shoulder_roll" />
+
+            <TextView
+                android:id="@+id/TextView_joint_3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <SeekBar 
+            android:id="@+id/SeekBar_joint_3"
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content"  />
+
+
+<!-- L Elbow Yaw -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="@string/label_l_elbow_yaw" />
+
+            <TextView
+                android:id="@+id/TextView_joint_4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <SeekBar 
+            android:id="@+id/SeekBar_joint_4"
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content"  />
+
+<!-- L Elbow Roll -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="@string/label_l_elbow_roll" />
+
+            <TextView
+                android:id="@+id/TextView_joint_5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <SeekBar 
+            android:id="@+id/SeekBar_joint_5"
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content"  />
+
+
+<!-- L Wrist Yaw -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="@string/label_l_wrist_yaw" />
+
+            <TextView
+                android:id="@+id/TextView_joint_6"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <SeekBar 
+            android:id="@+id/SeekBar_joint_6"
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content"  />
+
+
+<!-- R Shoulder Pitch -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="@string/label_r_shoulder_pitch" />
+
+            <TextView
+                android:id="@+id/TextView_joint_7"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <SeekBar 
+            android:id="@+id/SeekBar_joint_7"
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content"  />
+
+<!-- R Shoulder Roll -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="@string/label_r_shoulder_roll" />
+
+            <TextView
+                android:id="@+id/TextView_joint_8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <SeekBar 
+            android:id="@+id/SeekBar_joint_8"
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content"  />
+
+
+<!-- R Elbow Yaw -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="@string/label_r_elbow_yaw" />
+
+            <TextView
+                android:id="@+id/TextView_joint_9"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <SeekBar 
+            android:id="@+id/SeekBar_joint_9"
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content"  />
+
+<!-- R Elbow Roll -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="@string/label_r_elbow_roll" />
+
+            <TextView
+                android:id="@+id/TextView_joint_10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <SeekBar 
+            android:id="@+id/SeekBar_joint_10"
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content"  />
+
+<!-- R Wrist Yaw -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="@string/label_r_wrist_yaw" />
+
+            <TextView
+                android:id="@+id/TextView_joint_11"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <SeekBar 
+            android:id="@+id/SeekBar_joint_11"
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content"  />
+
+<!-- Hip Roll -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="@string/label_hip_roll" />
+
+            <TextView
+                android:id="@+id/TextView_joint_12"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <SeekBar 
+            android:id="@+id/SeekBar_joint_12"
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content"  />
+
+<!-- Hip Pitch -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="@string/label_hip_pitch" />
+
+            <TextView
+                android:id="@+id/TextView_joint_13"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <SeekBar 
+            android:id="@+id/SeekBar_joint_13"
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content"  />
+
+<!-- Knee Pitch -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="8dp"
+                android:text="@string/label_knee_pitch" />
+
+            <TextView
+                android:id="@+id/TextView_joint_14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <SeekBar 
+            android:id="@+id/SeekBar_joint_14"
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content"  />
+
+        <TextView
+            android:id="@+id/TextView_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
