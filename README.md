@@ -31,5 +31,5 @@ https://github.com/ohwada/Pepper_Android/tree/master/PepperPosture <br/>
 
 ### Pepper Joint
 Interpolates Pepper's one joints to a target angle. <br/>
-https://github.com/ohwada/Pepper_Android/tree/master/PepperPosture <br/>
+https://github.com/ohwada/Pepper_Android/tree/master/PepperJoint <br/>
 <img src="https://raw.githubusercontent.com/ohwada/Pepper_Android/master/PepperJoint/docs/screen.png" width="100" /> <br/>
