@@ -7,7 +7,7 @@ Pepper go to the predefined postures. <br/>
 Stand, StandInit, StandZero, Crouch<br/>
 
 This feature is similar to the pose library in Choregraphe<br/>
-<img src="https://raw.githubusercontent.com/ohwada/Pepper_Android/master/PepperPosture/docs/choregraphe_pose_library" width="200" /> <br/>
+<img src="https://raw.githubusercontent.com/ohwada/Pepper_Android/master/PepperPosture/docs/choregraphe_pose_library.png" width="200" /> <br/>
 
 [NAO's Predefined postures](http://doc.aldebaran.com/2-1/family/robots/postures_robot.html#robot-postures)
 
