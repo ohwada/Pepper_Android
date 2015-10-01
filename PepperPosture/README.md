@@ -21,5 +21,8 @@ https://github.com/ohwada/Pepper_Android/tree/master/PepperPosture/PepperPosture
 Require <br/>
 java-naoqi-sdk-xxx-android.jar <br/>
 
+### Blog (in Japanese)
+http://pepper.ohwada.jp/archives/1114
+
 ### Screenshot
 <img src="https://raw.githubusercontent.com/ohwada/Pepper_Android/master/PepperPosture/docs/screen.png" width="200" /> <br/>
