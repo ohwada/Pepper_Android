@@ -8,14 +8,14 @@ Pepper move to the given pose in the ground plane. <br/>
 This app has nine arrow buttons. <br/>
 When you touch the button, Pepper will move in the direction of the arrow. <br/>
 When you touch the stop button in the middle, Pepper will stop. <br/>
-[ Forward diagonally left ], [ Forward ], [ Forward diagonally right ]
-[ Left side ], [ Stop ], [ Right side ]
-[ Turn counter-clockwise ], [ Backward ], [ Turn clockwise ]
+[ Forward diagonally left ], [ Forward ], [ Forward diagonally right ] <br/>
+[ Left side ], [ Stop ], [ Right side ] <br/>
+[ Turn counter-clockwise ], [ Backward ], [ Turn clockwise ] <br/>
 
-You can three parameters in below .
-Distance to move to forward and backward (m) : Initial value 0.5m
-Distance to move to the left and right (m) : initial value 0.5m
-Rotating angle (degrees): initial value 90 degrees
+You can three parameters in below. <br/>
+Distance to move to forward and backward (m) : Initial value 0.5m <br/>
+Distance to move to the left and right (m) : initial value 0.5m <br/>
+Rotating angle (degrees): initial value 90 degrees <br/>
 
 ### API
 ALMotion - Locomotion control<br/>
