@@ -12,10 +12,14 @@ When you touch the stop button in the middle, Pepper will stop. <br/>
 [ Left side ], [ Stop ], [ Right side ] <br/>
 [ Turn counter-clockwise ], [ Backward ], [ Turn clockwise ] <br/>
 
-You can three parameters in below. <br/>
+You can use three parameters in below. <br/>
 Distance to move to forward and backward (m) : Initial value 0.5m <br/>
 Distance to move to the left and right (m) : initial value 0.5m <br/>
 Rotating angle (degrees): initial value 90 degrees <br/>
+
+### PRECAUTIONS
+Pepper might be falling in step or obstacle. <br/>
+Please to stay near of the Pepper, you can stop immediately. <br/>
 
 ### API
 ALMotion - Locomotion control<br/>
