@@ -5,6 +5,9 @@ Pepper Image Remote
 Android app <br/>
 Take a photo at the camera of Pepper, and display photo in Android phone. <br/>
 
+Note  <br/>
+This app is in development. <br/> 
+
 ### API
 - Take a photo <br/>
 [NAOqi ALVideoDevice#getImageRemote](http://doc.aldebaran.com/2-1/naoqi/vision/alvideodevice-api.html#ALVideoDeviceProxy::getImageRemote__ssCR) <br/>
