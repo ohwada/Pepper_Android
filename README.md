@@ -43,3 +43,8 @@ https://github.com/ohwada/Pepper_Android/tree/master/PepperMoveTo <br/>
 Pepper move at the given normalized velocity. <br/>
 https://github.com/ohwada/Pepper_Android/tree/master/PepperMoveToward <br/>
 <img src="https://raw.githubusercontent.com/ohwada/Pepper_Android/master/PepperMoveToward/docs/screen.png" width="100" /> <br/>
+
+### Pepper Image Remote
+Take a photo at the camera of Pepper, and display photo in Android phone. <br/>
+https://github.com/ohwada/Pepper_Android/tree/master/PepperImageRemote <br/>
+<img src="https://raw.githubusercontent.com/ohwada/Pepper_Android/master/PepperImageRemote/docs/screen.png" width="100" /> <br/>

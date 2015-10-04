@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 2015-10-01 K.OHWADA -->
+<resources>
+    <string name="app_name">PepperImageRemote</string>
+
+<!-- MainActivity -->
+    <string name="toast_photo_saved">Photo saved</string>
+    <string name="toast_get_image_remote_failed">getImageRemote failed</string>
+ 
+<!-- RobotController -->
+    <string name="toast_enter_ip">Please enter the ip address</string>
+    <string name="toast_enter_correct">Please enter the correct ip address</string>
+    <string name="toast_connected">Connected</string>
+    <string name="toast_connect_failed">Connect failed</string>
+    <string name="toast_not_connected">Not Connected</string>
+    <string name="toast_video_failed">Video failed</string>
+
+<!-- activity_main -->
+    <string name="edittext_ip_hint">IP Address</string>
+    <string name="button_connnect">Connnect</string>
+    <string name="button_get_image_remote">Get Image Remote</string>
+
+</resources>
