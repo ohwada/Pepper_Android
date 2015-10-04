@@ -15,7 +15,7 @@ Conversion from YUV to JPEG : [Android YuvImage#compressToJpeg](http://developer
 Conversion from JPEG to Bitmap : [Android BitmapFactory#decodeByteArray](http://developer.android.com/reference/android/graphics/BitmapFactory.html#decodeByteArray(byte[], int, int, android.graphics.BitmapFactory.Options)) <br/>
 
 ### Souce code
-https://github.com/ohwada/Pepper_Android/tree/master/PepperImageRemote/ImageRemote <br/>
+https://github.com/ohwada/Pepper_Android/tree/master/PepperImageRemote/PepperImageRemote <br/>
 
 Require <br/>
 java-naoqi-sdk-xxx-android.jar <br/>
